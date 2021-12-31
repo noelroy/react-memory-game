@@ -1,6 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+/* Styled Components 
+---------------------------------------------*/
+
 const blinkAnimation = keyframes`
   0% {
     animation-timing-function: ease-out;
@@ -46,9 +49,8 @@ const Image = styled.img`
   height: auto;
 `
 
-const BackImage = styled(Image)`
-max-width: 150px;
-`
+/* Card Component 
+------------------------------------------------*/
 
 const SingleCard = ({ card, handleOnClick, flipped }) => {
   if (flipped) {
@@ -60,8 +62,8 @@ const SingleCard = ({ card, handleOnClick, flipped }) => {
   } else {
     return (
       <Card>
-        <BackImage
-          src="/images/poke_trainer.png"
+        <Image
+          src="images/poke_trainer.png"
           alt="card back"
           onClick={() => handleOnClick(card)}
         />

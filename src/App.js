@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CardGrid from './components/CardGrid';
 import styled from 'styled-components'
+
+/* Styled Components 
+---------------------------------------------*/
 
 const Heading = styled.h1`
   font-size: 3em;
@@ -29,21 +32,28 @@ const Paragraph = styled.p`
   font-size: 2em;
 `
 
+/* Card Images
+---------------------------------------------- */
+
 const cardImages = [
-  { src: "/images/bulbasaur.png", flipped: false },
-  { src: "/images/charmander.png", flipped: false },
-  { src: "/images/eevee.png", flipped: false },
-  { src: "/images/psyduck.png", flipped: false },
-  { src: "/images/snorlax.png", flipped: false },
-  { src: "/images/squirtle.png", flipped: false }
+  { src: "images/bulbasaur.png", flipped: false },
+  { src: "images/charmander.png", flipped: false },
+  { src: "images/eevee.png", flipped: false },
+  { src: "images/psyduck.png", flipped: false },
+  { src: "images/snorlax.png", flipped: false },
+  { src: "images/squirtle.png", flipped: false }
 
 ]
+
+/* App Component 
+------------------------------------------------*/
 
 function App() {
 
   const [images, setImages] = useState([]);
   const [turns, setTurns] = useState(0);
 
+  // Function to shuffle cards
   const shuffleCards = () => {
     const newCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
@@ -51,6 +61,11 @@ function App() {
     setImages(newCards);
     setTurns(0);
   }
+
+  // Initialize board on page load
+  useEffect(() => {
+    shuffleCards()
+  }, [])
 
 
   return (

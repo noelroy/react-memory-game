@@ -3,6 +3,9 @@ import SingleCard from "./SingleCard";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 
+/* Styled Components 
+---------------------------------------------*/
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -10,10 +13,12 @@ const Grid = styled.div`
   margin: 2em;
 `
 
+/* Card Grid Component 
+------------------------------------------------*/
+
 const CardGrid = ({ images, setImages, setTurns }) => {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
-
   const [disabled, setDisabled] = useState(false);
 
   const resetChoices = () => {
