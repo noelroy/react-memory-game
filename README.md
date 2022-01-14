@@ -5,16 +5,12 @@ Pokemon card memory game using react js
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
+- [Available Scripts](#available-scripts)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Status](#status)
 
 
 ## Overview
@@ -70,4 +66,4 @@ Update hostname inside package.json before running this script.
 
 ## Status
 
-In progress. Will not be maintained.
+Completed. Will not be maintained.
